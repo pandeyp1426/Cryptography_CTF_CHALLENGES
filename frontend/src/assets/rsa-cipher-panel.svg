@@ -1,0 +1,14 @@
+<svg width="620" height="300" viewBox="0 0 620 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="620" height="300" rx="8" fill="#18181B"/>
+  <rect x="28" y="32" width="564" height="236" rx="6" fill="#09090B" stroke="#3F3F46"/>
+  <path d="M52 74H236" stroke="#2DD4BF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M52 104H356" stroke="#F59E0B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M52 134H294" stroke="#F43F5E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M52 196H568" stroke="#27272A" stroke-width="2"/>
+  <path d="M52 224H568" stroke="#27272A" stroke-width="2"/>
+  <circle cx="474" cy="101" r="42" fill="#111827" stroke="#2DD4BF" stroke-width="5"/>
+  <path d="M454 101L469 116L497 84" stroke="#2DD4BF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="52" y="180" fill="#D4D4D8" font-family="Consolas, monospace" font-size="18">n = p * q</text>
+  <text x="52" y="244" fill="#A1A1AA" font-family="Consolas, monospace" font-size="16">m = pow(c, inverse(e, phi), n)</text>
+</svg>
+
