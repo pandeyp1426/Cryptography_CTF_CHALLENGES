@@ -10,7 +10,7 @@ import SolveSteps from "../components/SolveSteps.jsx";
 import { useSolver } from "../hooks/useSolver.js";
 
 export default function Solve() {
-  const [category, setCategory] = useState("crypto");
+  const [category, setCategory] = useState("rsa");
   const [challenge, setChallenge] = useState("");
   const [file, setFile] = useState(null);
   const solver = useSolver();
@@ -31,7 +31,7 @@ export default function Solve() {
         <div className="grid gap-5 overflow-hidden rounded-md border border-zinc-800 bg-zinc-900 p-4 shadow-panel md:grid-cols-[1fr_260px]">
           <div className="flex flex-col justify-center gap-4">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-300">RSA workspace</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-300">Crypto challenge workspace</p>
               <h2 className="mt-2 text-3xl font-semibold tracking-normal text-white sm:text-4xl">
                 Solve, annotate, and save CTF challenges
               </h2>
@@ -110,4 +110,3 @@ export default function Solve() {
     </div>
   );
 }
-

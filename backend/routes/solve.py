@@ -66,7 +66,16 @@ async def solve(
 
 
 def _solve_by_category(category: str, text: str) -> dict[str, Any]:
-    if category == "crypto":
+    crypto_categories = {
+        "crypto",
+        "rsa",
+        "classical",
+        "analysis",
+        "symmetric",
+        "hashes",
+        "files",
+    }
+    if category in crypto_categories:
         return solve_rsa_challenge(text)
 
     flags = find_flags(text)
@@ -104,4 +113,3 @@ def _title_for_history(text: str, filename: str | None) -> str:
 
 def _event(event: str, payload: dict[str, Any]) -> str:
     return json.dumps({"event": event, **payload}, default=str) + "\n"
-

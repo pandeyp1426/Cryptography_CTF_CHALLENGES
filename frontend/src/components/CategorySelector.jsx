@@ -1,16 +1,17 @@
-import { Bug, Cpu, Globe2, KeyRound, Puzzle } from "lucide-react";
+import { Archive, BarChart3, Hash, KeyRound, Lock, Shuffle } from "lucide-react";
 
 const categories = [
-  { id: "crypto", label: "Crypto", icon: KeyRound, accent: "border-teal-400 text-teal-200" },
-  { id: "web", label: "Web", icon: Globe2, accent: "border-amber-400 text-amber-200" },
-  { id: "re", label: "RE", icon: Cpu, accent: "border-sky-400 text-sky-200" },
-  { id: "pwn", label: "Pwn", icon: Bug, accent: "border-rose-400 text-rose-200" },
-  { id: "misc", label: "Misc", icon: Puzzle, accent: "border-violet-400 text-violet-200" },
+  { id: "rsa", label: "RSA", icon: KeyRound, accent: "border-teal-400 text-teal-200" },
+  { id: "classical", label: "Classical", icon: Shuffle, accent: "border-amber-400 text-amber-200" },
+  { id: "analysis", label: "Analysis", icon: BarChart3, accent: "border-sky-400 text-sky-200" },
+  { id: "symmetric", label: "OTP/DES", icon: Lock, accent: "border-rose-400 text-rose-200" },
+  { id: "hashes", label: "Hashes", icon: Hash, accent: "border-violet-400 text-violet-200" },
+  { id: "files", label: "Files", icon: Archive, accent: "border-lime-400 text-lime-200" },
 ];
 
 export default function CategorySelector({ value, onChange }) {
   return (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-6">
       {categories.map((category) => {
         const Icon = category.icon;
         const isActive = value === category.id;
@@ -34,4 +35,3 @@ export default function CategorySelector({ value, onChange }) {
     </div>
   );
 }
-
