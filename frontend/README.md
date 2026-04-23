@@ -33,7 +33,7 @@ Solve.jsx
 | --- | --- |
 | Main solve page layout | `src/pages/Solve.jsx` |
 | Challenge text editor and upload button | `src/components/ChallengeInput.jsx` |
-| Category buttons | `src/components/CategorySelector.jsx` |
+| Challenge-family buttons | `src/components/CategorySelector.jsx` |
 | Step-by-step output | `src/components/SolveSteps.jsx` |
 | Flag display | `src/components/FlagOutput.jsx` |
 | Progressive hints | `src/components/HintPanel.jsx` |
@@ -69,6 +69,23 @@ Implemented
 
 Use the same status wording as the root README.
 
+## Challenge-Family Buttons
+
+The Solve page selector is intentionally crypto-focused. It should not show generic Web/RE/Pwn categories unless the project scope changes.
+
+Current buttons:
+
+```text
+RSA
+Classical
+Analysis
+OTP/DES
+Hashes
+Files
+```
+
+These map to the challenge groups in `src/pages/Explore.jsx` and to the backend solver roadmap in `backend/solvers/README.md`.
+
 ## Run Frontend
 
 From the repository root:
@@ -91,4 +108,3 @@ http://127.0.0.1:5173
 cd frontend
 npm.cmd run build
 ```
-
