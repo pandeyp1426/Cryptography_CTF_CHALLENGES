@@ -362,7 +362,12 @@ def _derive_flag_from_prompt(
         return None
 
     printable_text = decoded_text.strip()
-    if printable_text and "\ufffd" not in printable_text and printable_text.isprintable():
+    if (
+        printable_text
+        and "\ufffd" not in printable_text
+        and printable_text.isprintable()
+        and any(char.isalnum() for char in printable_text)
+    ):
         payload = printable_text
     else:
         payload = str(plaintext_value)
@@ -510,7 +515,12 @@ def _result(
 
 def _readable_preview(text: str, numeric_plaintext: int | None) -> str:
     stripped = text.strip()
-    if stripped and "\ufffd" not in stripped and all(char.isprintable() or char.isspace() for char in stripped):
+    if (
+        stripped
+        and "\ufffd" not in stripped
+        and all(char.isprintable() or char.isspace() for char in stripped)
+        and any(char.isalnum() for char in stripped)
+    ):
         return stripped
     if numeric_plaintext is not None:
         return str(numeric_plaintext)
